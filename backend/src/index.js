@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 5001;
 const __dirname = path.resolve();
 
 app.use(express.json());
-
 app.use(cookieParser());
 
 app.use(
@@ -32,17 +31,16 @@ app.use("/api/messages", messageRoutes);
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "../frontend/dist")));
     
-    // Catch-all route should be placed last
-    app.get("*", (req, res) => {
+    // FIX: Use proper wildcard pattern
+    app.get("/*", (req, res) => {
         res.sendFile(path.resolve(__dirname, "../", "frontend", "dist", "index.html"));
     });
 
     app.use((req, res, next) => {
-    console.log(`Request made to: ${req.url}`);
-    next();
-});
+        console.log(`Request made to: ${req.url}`);
+        next();
+    });
 }
-
 
 server.listen(PORT, () => {
   console.log("Server is running on port :" + PORT);
