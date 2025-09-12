@@ -24,19 +24,25 @@ app.use(
   })
 );
 
+// API Routes first
 app.use("/api/auth", authRoutes);
-
 app.use("/api/messages", messageRoutes);
 
+// Static file handling for production
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "../frontend/dist")));
-
-    app.get(/(.*)/, (req, res) => {
-      res.sendFile(
-        path.resolve(__dirname, "../", "frontend", "dist", "index.html")
-      );
+    
+    // Catch-all route should be placed last
+    app.get("*", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "../", "frontend", "dist", "index.html"));
     });
+
+    app.use((req, res, next) => {
+    console.log(`Request made to: ${req.url}`);
+    next();
+});
 }
+
 
 server.listen(PORT, () => {
   console.log("Server is running on port :" + PORT);
