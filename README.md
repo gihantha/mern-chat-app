@@ -95,82 +95,82 @@ To run this project locally, follow these steps:
 
 ### Folder Structure
 
-
-mern-chat-app/
-├── .gitignore
-├── backend/
-│ ├── .gitignore
-│ ├── package-lock.json
-│ ├── package.json
-│ └── src/
-│ ├── controllers/
-│ │ ├── auth.controller.js
-│ │ └── message.controller.js
-│ ├── index.js
-│ ├── lib/
-│ │ ├── cloudinary.js
-│ │ ├── db.js
-│ │ ├── socket.js
-│ │ └── utils.js
-│ ├── middleware/
-│ │ └── auth.middleware.js
-│ ├── models/
-│ │ ├── message.model.js
-│ │ └── user.model.js
-│ ├── routes/
-│ │ ├── auth.route.js
-│ │ └── message.route.js
-│ └── seeds/
-│ └── user.seed.js
-├── frontend/
-│ ├── .gitignore
-│ ├── eslint.config.js
-│ ├── index.html
-│ ├── package-lock.json
-│ ├── package.json
-│ ├── postcss.config.js
-│ ├── public/
-│ │ ├── avatar.png
-│ │ └── vite.svg
-│ ├── README.md
-│ ├── src/
-│ │ ├── App.css
-│ │ ├── App.jsx
-│ │ ├── assets/
-│ │ │ └── react.svg
-│ │ ├── components/
-│ │ │ ├── AuthImagePattern.jsx
-│ │ │ ├── ChatContainer.jsx
-│ │ │ ├── ChatHeader.jsx
-│ │ │ ├── MessageInput.jsx
-│ │ │ ├── Navbar.jsx
-│ │ │ ├── NoChatSelected.jsx
-│ │ │ ├── Sidebar.jsx
-│ │ │ └── skeletons/
-│ │ │ ├── MessageSkeleton.jsx
-│ │ │ └── SidebarSkeleton.jsx
-│ │ ├── constants/
-│ │ │ └── index.js
-│ │ ├── index.css
-│ │ ├── lib/
-│ │ │ ├── axios.js
-│ │ │ └── utils.js
-│ │ ├── main.jsx
-│ │ ├── pages/
-│ │ │ ├── HomePage.jsx
-│ │ │ ├── LoginPage.jsx
-│ │ │ ├── ProfilePage.jsx
-│ │ │ ├── SettingsPage.jsx
-│ │ │ └── SignUpPage.jsx
-│ │ └── store/
-│ │ ├── useAuthStore.js
-│ │ ├── useChatStore.js
-│ │ └── useThemeStore.js
-│ ├── tailwind.config.js
-│ └── vite.config.js
-├── package-lock.json
-└── package.json
-
+```bash
+    mern-chat-app/
+    ├── .gitignore
+    ├── backend/
+    │ ├── .gitignore
+    │ ├── package-lock.json
+    │ ├── package.json
+    │ └── src/
+    │ ├── controllers/
+    │ │ ├── auth.controller.js
+    │ │ └── message.controller.js
+    │ ├── index.js
+    │ ├── lib/
+    │ │ ├── cloudinary.js
+    │ │ ├── db.js
+    │ │ ├── socket.js
+    │ │ └── utils.js
+    │ ├── middleware/
+    │ │ └── auth.middleware.js
+    │ ├── models/
+    │ │ ├── message.model.js
+    │ │ └── user.model.js
+    │ ├── routes/
+    │ │ ├── auth.route.js
+    │ │ └── message.route.js
+    │ └── seeds/
+    │ └── user.seed.js
+    ├── frontend/
+    │ ├── .gitignore
+    │ ├── eslint.config.js
+    │ ├── index.html
+    │ ├── package-lock.json
+    │ ├── package.json
+    │ ├── postcss.config.js
+    │ ├── public/
+    │ │ ├── avatar.png
+    │ │ └── vite.svg
+    │ ├── README.md
+    │ ├── src/
+    │ │ ├── App.css
+    │ │ ├── App.jsx
+    │ │ ├── assets/
+    │ │ │ └── react.svg
+    │ │ ├── components/
+    │ │ │ ├── AuthImagePattern.jsx
+    │ │ │ ├── ChatContainer.jsx
+    │ │ │ ├── ChatHeader.jsx
+    │ │ │ ├── MessageInput.jsx
+    │ │ │ ├── Navbar.jsx
+    │ │ │ ├── NoChatSelected.jsx
+    │ │ │ ├── Sidebar.jsx
+    │ │ │ └── skeletons/
+    │ │ │ ├── MessageSkeleton.jsx
+    │ │ │ └── SidebarSkeleton.jsx
+    │ │ ├── constants/
+    │ │ │ └── index.js
+    │ │ ├── index.css
+    │ │ ├── lib/
+    │ │ │ ├── axios.js
+    │ │ │ └── utils.js
+    │ │ ├── main.jsx
+    │ │ ├── pages/
+    │ │ │ ├── HomePage.jsx
+    │ │ │ ├── LoginPage.jsx
+    │ │ │ ├── ProfilePage.jsx
+    │ │ │ ├── SettingsPage.jsx
+    │ │ │ └── SignUpPage.jsx
+    │ │ └── store/
+    │ │ ├── useAuthStore.js
+    │ │ ├── useChatStore.js
+    │ │ └── useThemeStore.js
+    │ ├── tailwind.config.js
+    │ └── vite.config.js
+    ├── package-lock.json
+    └── package.json
+```
 ---
 
 ### Usage
