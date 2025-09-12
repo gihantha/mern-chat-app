@@ -37,12 +37,11 @@ if (process.env.NODE_ENV === "production") {
   // Serve static files from frontend/dist (production build of React)
   app.use(express.static(path.join(__dirname, "../../frontend/dist")));
 
-  // Handle all routes by sending the index.html for SPA routing
-  app.all("*", (req, res) => {
+  // Handle all GET requests and serve the React index.html
+  app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../../frontend/dist", "index.html"));
   });
 }
-
 
 // Start the server and connect to the database
 server.listen(PORT, () => {
