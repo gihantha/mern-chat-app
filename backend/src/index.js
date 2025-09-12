@@ -38,13 +38,11 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../../frontend/dist")));
 
   // Handle all routes by sending the index.html for SPA routing
-  app.get("*", (req, res) => {
+  app.all("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../../frontend/dist", "index.html"));
   });
-} else {
-  // Development-specific code (if needed)
-  console.log("In development mode, API routes go here.");
 }
+
 
 // Start the server and connect to the database
 server.listen(PORT, () => {
